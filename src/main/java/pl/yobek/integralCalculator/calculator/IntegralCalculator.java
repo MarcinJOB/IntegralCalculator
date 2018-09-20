@@ -5,8 +5,5 @@ import pl.yobek.integralCalculator.function.*;
 
 public interface IntegralCalculator {
 	
-	public double calculate(
-			IntegrableFunction myFunction, 
-			IntegralRange range, 
-			int sections);
+	public double calculate(IntegrableFunction myFunction, IntegralRangeAndPrecision range);
 }
