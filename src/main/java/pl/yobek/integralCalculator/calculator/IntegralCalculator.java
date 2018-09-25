@@ -3,7 +3,6 @@ package pl.yobek.integralCalculator.calculator;
 import pl.yobek.integralCalculator.function.*;
 
 
-public interface IntegralCalculator {
-	
-	public double calculate(IntegrableFunction myFunction, IntegralRangeAndPrecision range);
+public interface IntegralCalculator<F extends Function> {
+	public double calculate(F function, IntegralRangeAndPrecision range);
 }

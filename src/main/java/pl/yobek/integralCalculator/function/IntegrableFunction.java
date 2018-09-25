@@ -1,8 +1,5 @@
 package pl.yobek.integralCalculator.function;
 
-public interface IntegrableFunction {
-	
-	public double getValue(double argument);
-	public double getIntegral(double argument);
-
+public interface IntegrableFunction extends Function{
+	public Function getIntegral();
 }

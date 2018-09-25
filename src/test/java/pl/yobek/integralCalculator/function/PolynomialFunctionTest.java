@@ -16,12 +16,14 @@ public class PolynomialFunctionTest {
 	public void testConstructorWithZeroArguments() {
 		PolynomialFunction testFunction = new PolynomialFunction();
 		assertEquals(0d, testFunction.getValue(2), 0.001);
+		assertEquals(0d, testFunction.getIntegral().getValue(1), 0.001);
 	}
 	
 	@Test
 	public void testConstructorWithThreeArguments() {
-		PolynomialFunction testFunction = new PolynomialFunction(1.0, 2.0, 3.0);
-		assertEquals(17d, testFunction.getValue(2), 0.001);
+		PolynomialFunction testFunction = new PolynomialFunction(3.0, 1.0, 2.0);
+		assertEquals(13d, testFunction.getValue(2), 0.001);
+		assertEquals(110.833, testFunction.getIntegral().getValue(5), 0.001);
 	}
 	
 	@Test

@@ -1,13 +1,15 @@
 package pl.yobek.integralCalculator.function;
 
 public class IntegralRangeAndPrecision {
-	private double min, max, step;
+	private double min, max, numOfSteps;
 	
-	public IntegralRangeAndPrecision(double range1, double range2, int sections) {
+	public IntegralRangeAndPrecision() {}
+	
+	public IntegralRangeAndPrecision(double range1, double range2, int numOfSteps) {
+		super();
 		this.min = range1 < range2 ? range1 : range2; 
 		this.max = range1 > range2 ? range1 : range2; 
-		this.step = (this.max - this.min) / sections;
-		
+		this.numOfSteps = numOfSteps;	
 	}
 
 	public double getMin() {
@@ -19,6 +21,6 @@ public class IntegralRangeAndPrecision {
 	}
 
 	public double getStep() {
-		return step;
+		return (this.max - this.min) / numOfSteps;
 	}
 }
